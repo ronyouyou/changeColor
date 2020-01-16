@@ -23,10 +23,10 @@
 	
     <script>
         let Interval = null;
-	let encours = false;
+	    let encours = false;
         function ChangerFond() {
 			if(encours == false){
-				Interval = window.setInterval(ChangerBackground, 100);
+				Interval = window.setInterval(ChangerBackground, 1000);
 				encours = true;
 			}
         }
