@@ -11,22 +11,27 @@
 <body id="contenu">
 
     <h1>Hello World !</h1>
-
-    <button type="button" onclick="ChangerFond()">Changer le fond page</button>
-    <button type="button" onclick="StopBackground()">Stopper le fond page</button>
-
+    
     <div id="text">
-        <p id="addHello">Hello World</p>
+        <p>Sur ce site vous aurez la possibilité de pouvoir changer le fond de couleur toutes les décisecondes ! Rien que ça !</p>
     </div>
+
+    <button type="button" onclick="ChangerFond()">Changer le fond page !</button>
+    <button type="button" onclick="StopBackground()">Stopper le fond page !</button>
     
     <script>
         let Interval = null;
+		let encours = false;
         function ChangerFond() {
-            Interval = window.setInterval(ChangerBackground, 100);
+			if(encours == false){
+				Interval = window.setInterval(ChangerBackground, 100);
+				encours = true;
+			}
         }
         function StopBackground() {
             clearInterval(Interval);
             Interval = null;
+			encours = false;
         }
 
         function ChangerBackground() {
