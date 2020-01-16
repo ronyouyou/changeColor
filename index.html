@@ -17,11 +17,13 @@
     </div>
 
     <button type="button" onclick="ChangerFond()">Changer le fond page !</button>
-    <button type="button" onclick="StopBackground()">Stopper le fond page !</button>
-    
+    <button type="button" onclick="StopBackground()">Stopper le fond page !</button><br />
+	
+    <a href="https://stackoverflow.com/questions/1484506/random-color-generator">Aide pour un génrateur de couleur !<a/>
+	
     <script>
         let Interval = null;
-		let encours = false;
+	let encours = false;
         function ChangerFond() {
 			if(encours == false){
 				Interval = window.setInterval(ChangerBackground, 100);
