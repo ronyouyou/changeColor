@@ -8,46 +8,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body id="page">
+<body id="contenu">
 
     <h1>Hello World !</h1>
 
-    <ul>
-    </ul>
-
-    <button type="button" onclick="addHelloWorld()">Changer couleur Hello World (petit)</button>
-
-    <button type="button" onclick="ClickChangerBackground()">Changer fond page</button>
-    <button type="button" onclick="ClickStopBackground()">Stopper fond page</button>
+    <button type="button" onclick="ChangerFond()">Changer le fond page</button>
+    <button type="button" onclick="StopBackground()">Stopper le fond page</button>
 
     <div id="text">
         <p id="addHello">Hello World</p>
     </div>
-
-
+    
     <script>
-        let a = true;
         let Interval = null;
-        function ClickChangerBackground() {
-                Interval = window.setInterval(ChangerBackground, 100);
-                a =false;
+        function ChangerFond() {
+            Interval = window.setInterval(ChangerBackground, 100);
         }
-        function ClickStopBackground() {
+        function StopBackground() {
             clearInterval(Interval);
             Interval = null;
         }
-        
 
         function ChangerBackground() {
-            document.getElementById("page").style.backgroundColor = getRandomColor();
+            document.getElementById("contenu").style.backgroundColor = getAleatColor();
         }
 
-        function addHelloWorld() {
-            document.getElementById('addHello').style.color = getRandomColor();
-        }
-
-        
-        function getRandomColor() {
+        function getAleatColor() {
             var letters = '0123456789ABCDEF';
             var color = '#';
             for (var i = 0; i < 6; i++) {
@@ -55,7 +41,6 @@
             }
             return color;
         }
-
     </script>
     <link rel="stylesheet" type="text/css" href="main.css" />
 
