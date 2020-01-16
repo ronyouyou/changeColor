@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body id="page">
+
+    <h1>Hello World !</h1>
+
+    <ul>
+    </ul>
+
+    <button type="button" onclick="addHelloWorld()">Changer couleur Hello World (petit)</button>
+
+    <button type="button" onclick="ClickChangerBackground()">Changer fond page</button>
+    <button type="button" onclick="ClickStopBackground()">Stopper fond page</button>
+
+    <div id="text">
+        <p id="addHello">Hello World</p>
+    </div>
+
+
+    <script>
+        let a = true;
+        let Interval = null;
+        function ClickChangerBackground() {
+                Interval = window.setInterval(ChangerBackground, 100);
+                a =false;
+        }
+        function ClickStopBackground() {
+            clearInterval(Interval);
+            Interval = null;
+        }
+        
+
+        function ChangerBackground() {
+            document.getElementById("page").style.backgroundColor = getRandomColor();
+        }
+
+        function addHelloWorld() {
+            document.getElementById('addHello').style.color = getRandomColor();
+        }
+
+        
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+    </script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+
+</body>
+
+</html>
