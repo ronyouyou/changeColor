@@ -23,30 +23,30 @@
 	
     <script>
         let Interval = null;
-	    let encours = false;
+	let encours = false;
         function ChangerFond() {
-			if(encours == false){
-				Interval = window.setInterval(ChangerBackground, 100);
-				encours = true;
-			}
+		if(encours == false){
+			Interval = window.setInterval(ChangerBackground, 100);
+			encours = true;
+		}
         }
         function StopBackground() {
-            clearInterval(Interval);
-            Interval = null;
-			encours = false;
+       		clearInterval(Interval);
+        	Interval = null;
+		encours = false;
         }
 
         function ChangerBackground() {
-            document.getElementById("contenu").style.backgroundColor = getAleatColor();
+        	document.getElementById("contenu").style.backgroundColor = getAleatColor();
         }
 
         function getAleatColor() {
-            var letters = '0123456789ABCDEF';
-            var color = '#';
-            for (var i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
+        	var letters = '0123456789ABCDEF';
+        	var color = '#';
+        	for (var i = 0; i < 6; i++) {
+                	color += letters[Math.floor(Math.random() * 16)];
+            	}
+            	return color;
         }
     </script>
     <link rel="stylesheet" type="text/css" href="main.css" />
