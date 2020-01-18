@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +9,12 @@
 
 	<body id="contenu">
 
-		<div>
+		<div id="haut-page">
 			<h1>Changeons de couleur !</h1>
 			<footer class="blockquote-footer">Hello everyone ! Let's change the background color !</footer>
 		</div><br />
 		
-		<div id="text">
+		<div id="text-role">
 			<p>Sur ce site vous aurez la possibilité de pouvoir changer le fond de couleur toutes les décisecondes ! Rien que ça !</p>
 		</div>
 		
@@ -23,14 +22,14 @@
 		<button type="button" class="btn btn-secondary" onclick="StopColor()">Stopper le fond page !</button>
 		<br /><br />
 		
-		<ul id="listeaide">
+		<ul id="liste-aide">
 			<li><a style="text-align: center" href="https://stackoverflow.com/questions/1484506/random-color-generator">Aide pour créer un générateur de couleur !<a/></li>
 			<li><a style="text-align: center" href="https://www.w3schools.com/jsref/met_win_setinterval.asp">Aide pour démarrer une action répétitive (le changement de couleur) !<a/></li>
 			<li><a style="text-align: center" href="https://www.w3schools.com/jsref/met_win_clearinterval.asp">Aide pour arrêter la répétition !<a/></li>
 		</ul>
 		
-		<p class="basdroite">Par Youness BENDAOUD</p>
-		<script>
+		<p class="bas-droite">Par Youness BENDAOUD</p>
+		<script id="js-aleat-color">
 		let Interval = null;
 		let encours = false;
 		function ChangeColor() {
@@ -63,5 +62,4 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	</body>
-
 </html>
