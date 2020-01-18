@@ -1,11 +1,17 @@
 div {
-    color: blue;
+    color: MediumSeaGreen;
 }
 span {
-    color: tomato;
+    color: MediumSeaGreen;
     font-style: italic;
     font-size: 50px;
 }
-h1 {
-    color:pink;
+h1, footer {
+    text-align: center
+}
+.basdroite {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
 }
